@@ -1,7 +1,100 @@
-
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 div{
     border: 1px solid black;
     padding: 5px;
 }
 
+.heading{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heading-box{
+    display: flex;
+    margin: 0px 5px;
+    padding: 0 150px;
+}
+
+.navigation{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;  
+}
+
+.nav-box{
+    display: flex;
+    flex-direction: row;
+    width: 13%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.side{
+    text-align: center;
+    width: 35%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.side-box{
+    justify-content: flex-start;
+    align-content: center;
+    padding-bottom: 42px;
+}
+.main{
+    text-align: justify;
+    justify-content: flex-start;
+    width: 65%;
+    flex-direction: column;
+}
+@media (min-width:600px) and (max-width:990px){
+    .heading{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+    }
+    .nav-box{
+        width: 25%;
+    }
+    .side-box{
+        justify-content: flex-start;
+        align-content: center;
+        padding-bottom: 0px;
+    }
+    .special-side-box{
+        justify-content: flex-end;
+        align-content: flex-end;
+        justify-self: flex-end;
+    }
+} 
+
+@media (max-width:599px){
+    .heading{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+    }
+    .nav-box{
+        width: 25%;
+    }
+    .content{
+        display: none;
+    }
+}
